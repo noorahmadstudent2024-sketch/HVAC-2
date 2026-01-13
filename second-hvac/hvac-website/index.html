@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVACR Student Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar sticky">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1 class="nav-title">HVACR Guide</h1>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#compressor" class="nav-link">Compressor</a>
+                <a href="#wiring" class="nav-link">Wiring</a>
+                <a href="#pressures" class="nav-link">Pressures</a>
+                <a href="#tools" class="nav-link">Tools</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="section-title">HVACR Student Guide</h2>
+                    <p class="section-subtitle">
+                        Apka swagat hai HVACR (Heating, Ventilation, Air Conditioning, and Refrigeration) ki duniya mein
+                    </p>
+                    <div class="image-container">
+                        <img src='pic/overview' class='hero-image' alt='HVAC System Overview'>
+                    </div>
+                </div>
+
+                <div class="intro-content">
+                    <h3 class="subsection-title">Introduction</h3>
+                    <div class="content-box">
+                        <p>
+                            HVACR ka matlab hai Heating, Ventilation, Air Conditioning, aur Refrigeration. Yeh ek complex lekin essential field hai jo humare comfort aur safety ka system banta hai. HVACR technicians buildings ke indoor climate ko control karte hain aur ensure karte hain ke air quality achhi rahe.
+                        </p>
+                        <p>
+                            HVACR mein different systems aur components hote hain jaise compressors, condensers, evaporators, expansion valves, aur electrical controls. Har component ka apna role hota hai system ke proper functioning mein.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="definitions-grid">
+                    <div class="definition-card blue">
+                        <h4><i class="fas fa-snowflake"></i> Refrigeration</h4>
+                        <p>
+                            Refrigeration wo process hai jisme heat ko ek lower temperature se remove kiya jata hai taake temperature aur further kam ho sake. Yeh process refrigerant gases ka istemal karke hota hai jo phase change ke through heat absorb aur release karte hain. Refrigeration systems mein compressor, condenser, expansion valve, aur evaporator hota hai.
+                        </p>
+                    </div>
+                    <div class="definition-card green">
+                        <h4><i class="fas fa-wind"></i> Air Conditioning</h4>
+                        <p>
+                            Air conditioning wo technology hai jo indoor air temperature aur humidity ko control karti hai. AC systems not just cool the air but also dehumidify aur filter karte hain taake comfortable aur healthy environment ban sake. Modern AC systems energy-efficient aur smart controls ke saath aate hain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compressor Section -->
+        <section id="compressor" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-compress-arrows-alt"></i> Compressor</h2>
+
+                <div class="compressor-content">
+                    <div class="compressor-types">
+                        <div class="compressor-type">
+                            <h4><i class="fas fa-home"></i> Internal Compressor</h4>
+                            <p>
+                                Internal compressor wo hota hai jo refrigeration system ke andhar hi mounted hota hai. Yeh hermetically sealed hota hai aur refrigerant cycle ke through cool hota hai. Internal compressors mein motor aur compressor assembly ek hi housing mein hota hai aur refrigerant cooling provide karta hai. Yeh typically residential aur light commercial applications mein use hote hain.
+                            </p>
+                        </div>
+                        <div class="compressor-type">
+                            <h4><i class="fas fa-industry"></i> External Compressor</h4>
+                            <p>
+                                External compressor wo hota hai jo refrigeration system ke bahar hota hai aur separate mounting ke saath aata hai. Yeh semi-hermetic ya open type hota hai aur external cooling methods jaise air-cooled ya water-cooled hota hai. External compressors mein motor aur compressor separately cooled hote hain aur maintenance ke liye easily accessible hote hain. Yeh heavy-duty commercial aur industrial applications mein use hote hain.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="troubleshooting-table">
+                        <h3>Compressor Faults Troubleshooting Table</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fault Type</th>
+                                    <th>Symptom</th>
+                                    <th>Normal Amperage</th>
+                                    <th>Faulty Amperage</th>
+                                    <th>Action Required</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fault-stuck">Stuck Compressor</td>
+                                    <td>Compressor motor unable to start, humming sound</td>
+                                    <td>Rated FLA (Full Load Amps)</td>
+                                    <td>150-200% of FLA initially, then trips</td>
+                                    <td>Replace compressor, check start components</td>
+                                </tr>
+                                <tr>
+                                    <td class="fault-grounded">Grounded Compressor</td>
+                                    <td>Short circuit, no operation, tripped breaker</td>
+                                    <td>Rated FLA (Full Load Amps)</td>
+                                    <td>Infinite amps, immediate trip</td>
+                                    <td>Replace compressor, check wiring insulation</td>
+                                </tr>
+                                <tr>
+                                    <td class="fault-normal">Normal Operation</td>
+                                    <td>Smooth running, steady operation</td>
+                                    <td>Rated FLA ± 10%</td>
+                                    <td>-</td>
+                                    <td>Continue monitoring</td>
+                                </tr>
+                                <tr>
+                                    <td class="fault-overload">Overload</td>
+                                    <td>High load, overheating, cycling</td>
+                                    <td>Rated FLA (Full Load Amps)</td>
+                                    <td>110-150% of FLA sustained</td>
+                                    <td>Check system pressures, airflow, load</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/types-compressor.jfif' class="zoomable-image" alt='Compressor Type'>
+                            </div>
+                            <p>Compressor Type</p>
+                        </div>
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/checing-ampare copressor.jfif' class="zoomable-image" alt='Checking Compressor Amperes'>
+                            </div>
+                            <p>Checking Compressor Amperes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wiring Section -->
+        <section id="wiring" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-plug"></i> Wiring Diagrams & Logic</h2>
+
+                <div class="wiring-systems">
+                    <div class="system-grid">
+                        <div class="system-card">
+                            <i class="fas fa-glass-whiskey"></i>
+                            <h4>Water Dispenser</h4>
+                            <p>Pump, solenoid valve, heating elements</p>
+                        </div>
+                        <div class="system-card">
+                            <i class="fas fa-snowflake"></i>
+                            <h4>Deep Freezer</h4>
+                            <p>Compressor, thermostat, defrost timer</p>
+                        </div>
+                        <div class="system-card">
+                            <i class="fas fa-wind"></i>
+                            <h4>Window AC</h4>
+                            <p>Compressor, fan motors, control board</p>
+                        </div>
+                        <div class="system-card">
+                            <i class="fas fa-window-maximize"></i>
+                            <h4>Split AC</h4>
+                            <p>Indoor/outdoor units, communication wire</p>
+                        </div>
+                        <div class="system-card">
+                            <i class="fas fa-microchip"></i>
+                            <h4>Inverter Split AC</h4>
+                            <p>Inverter board, variable frequency drive</p>
+                        </div>
+                        <div class="system-card">
+                            <i class="fas fa-ice-cream"></i>
+                            <h4>Defrost Logic</h4>
+                            <p>Timer, heater, temperature sensors</p>
+                        </div>
+                    </div>
+
+                    <div class="system-details">
+                        <div class="system-detail">
+                            <h4><i class="fas fa-glass-whiskey"></i> Water Dispenser Wiring</h4>
+                            <div class="detail-content">
+                                <p>
+                                    Water dispenser wiring mein main components mein pump, solenoid valve, aur heating/cooling elements hote hain. Main power supply se relay boards tak connection hoti hai jo different functions ko control karte hain. Pump motor ke liye separate overload protection hoti hai aur solenoid valves normally closed hoti hain jab tak signal na mile.
+                                </p>
+                                <ul>
+                                    <li>Main supply: 220V AC input with safety fuse</li>
+                                    <li>Pump motor: 120W DC motor with speed controller</li>
+                                    <li>Solenoid valves: 12V DC for hot/cold water selection</li>
+                                    <li>Heating element: 500W with thermal cut-off switch</li>
+                                    <li>Cooling unit: Peltier device with fan cooling</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="system-detail">
+                            <h4><i class="fas fa-snowflake"></i> Deep Freezer Wiring</h4>
+                            <div class="detail-content">
+                                <p>
+                                    Deep freezer wiring mein compressor, thermostat, defrost timer, aur overload protector hota hai. Compressor starter relay aur overload protector main power supply se connected hote hain. Thermostat temperature ko monitor karta hai aur compressor ko ON/OFF karta hai. Defrost timer periodically compressor ko stop karta hai aur defrost heater ko activate karta hai.
+                                </p>
+                                <ul>
+                                    <li>Compressor: 1/4 HP to 1/2 HP with PTC relay</li>
+                                    <li>Thermostat: Adjustable temp range -10°C to -25°C</li>
+                                    <li>Defrost timer: Mechanical/electronic 8-12 hour cycle</li>
+                                    <li>Overload protector: Thermal overload for compressor</li>
+                                    <li>Light: Interior LED with door switch</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="system-detail">
+                            <h4><i class="fas fa-wind"></i> Window AC Wiring</h4>
+                            <div class="detail-content">
+                                <p>
+                                    Window AC mein single unit mein compressor, condenser fan, evaporator fan, aur control board hota hai. Power supply se compressor aur fan motors tak connections hoti hain. Control board different functions ko manage karta hai jaise cooling mode, fan speed, timer, etc. All connections are through terminal block for easy serviceability.
+                                </p>
+                                <ul>
+                                    <li>Compressor: 1/2 HP to 2 HP with start/run capacitors</li>
+                                    <li>Condenser fan: 60W motor with thermal protection</li>
+                                    <li>Evaporator fan: 40W motor for air circulation</li>
+                                    <li>Control board: Microprocessor based with display</li>
+                                    <li>Drain pump: Optional for high humidity areas</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="system-detail">
+                            <h4><i class="fas fa-window-maximize"></i> Split AC Wiring</h4>
+                            <div class="detail-content">
+                                <p>
+                                    Split AC mein indoor aur outdoor units ke beech connections hoti hain. Main power supply indoor unit mein hoti hai jo outdoor unit tak 4-wire connection ke through jati hai (2 power + 2 communication). Indoor unit mein PCB control panel, fan motor, expansion valve control hota hai. Outdoor unit mein compressor, condenser fan, aur main control PCB hota hai.
+                                </p>
+                                <ul>
+                                    <li>Power connection: 220V AC between indoor/outdoor units</li>
+                                    <li>Communication wire: RS485 or proprietary protocol</li>
+                                    <li>Indoor PCB: Fan control, temperature sensing</li>
+                                    <li>Outdoor PCB: Compressor control, pressure monitoring</li>
+                                    <li>Refrigerant lines: Liquid and suction pipes</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="system-detail">
+                            <h4><i class="fas fa-microchip"></i> Inverter Split AC Wiring</h4>
+                            <div class="detail-content">
+                                <p>
+                                    Inverter AC mein special inverter board hota hai jo compressor speed ko vary kar sakta hai. Main power supply rectifier se DC mein convert hoti hai aur phir inverter board AC mein convert karti hai variable frequency aur voltage ke saath. This allows precise temperature control aur energy saving. Communication between indoor/outdoor units is more sophisticated with multiple data lines.
+                                </p>
+                                <ul>
+                                    <li>Inverter board: Converts DC to variable freq AC</li>
+                                    <li>IPM module: Intelligent Power Module for compressor</li>
+                                    <li>Current sensors: Monitor compressor current</li>
+                                    <li>Temperature sensors: Multiple points monitoring</li>
+                                    <li>Expansion valve: Electronic expansion valve (EEV)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="defrost-section">
+                        <h3>Defrost vs No-Frost Systems</h3>
+                        <div class="defrost-grid">
+                            <div class="defrost-type defrost">
+                                <h4><i class="fas fa-fire"></i> Defrost System</h4>
+                                <p>
+                                    Defrost system mein periodic heating elements activate hote hain taake ice buildup remove ho sake. Defrost timer compressor ko stop karta hai aur defrost heaters ko activate karta hai for specific duration. Temperature sensors ensure that defrost cycle stops when evaporator reaches safe temperature. This prevents ice accumulation on evaporator coils.
+                                </p>
+                                <ul>
+                                    <li>Defrost timer: Starts heating cycle every 6-12 hours</li>
+                                    <li>Defrost heaters: Electric heating elements on coils</li>
+                                    <li>Temperature sensor: Prevents overheating</li>
+                                    <li>Drip tray: Collects melted ice water</li>
+                                    <li>Drain pump: Removes water from system</li>
+                                </ul>
+                            </div>
+                            <div class="defrost-type nofrost">
+                                <h4><i class="fas fa-snowflake"></i> No-Frost System</h4>
+                                <p>
+                                    No-frost system mein fan continuously air ko circulate karta hai aur defrost cycle automatically timed hota hai. Advanced systems mein adaptive defrost algorithm hota hai jo actual ice buildup ko monitor karta hai. Fan speed aur timing ice formation ke hisab se vary hoti hai. This reduces energy consumption aur maintains consistent temperature.
+                                </p>
+                                <ul>
+                                    <li>Fan circulation: Continuous air movement</li>
+                                    <li>Adaptive defrost: Ice detection algorithm</li>
+                                    <li>Humidity sensors: Monitor moisture levels</li>
+                                    <li>Smart timers: Variable defrost intervals</li>
+                                    <li>Energy optimization: Reduced defrost cycles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/split-ac.jfif' class="zoomable-image" alt='AC Wiring'>
+                            </div>
+                            <p>AC Wiring Diagram</p>
+                        </div>
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/no frost.jfif' class="zoomable-image" alt='No Frost Refrigerator Wiring'>
+                            </div>
+                            <p>No Frost Refrigerator Wiring</p>
+                        </div>
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/water-despenser.jfif' class="zoomable-image" alt='Water Dispenser Circuit'>
+                            </div>
+                            <p>Water Dispenser Circuit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pressures Section -->
+        <section id="pressures" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-gauge-high"></i> Refrigerant Pressures</h2>
+
+                <div class="pressure-content">
+                    <div class="pressure-table">
+                        <h3>Refrigerant Suction aur Discharge Pressure Table</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Refrigerant Type</th>
+                                    <th>Suction Pressure (PSIG)</th>
+                                    <th>Discharge Pressure (PSIG)</th>
+                                    <th>Superheat</th>
+                                    <th>Subcooling</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>R-22</td>
+                                    <td>65-75 PSIG (Cooling)</td>
+                                    <td>250-275 PSIG</td>
+                                    <td>8-12°F</td>
+                                    <td>10-15°F</td>
+                                </tr>
+                                <tr>
+                                    <td>R-410A</td>
+                                    <td>110-130 PSIG (Cooling)</td>
+                                    <td>380-420 PSIG</td>
+                                    <td>8-12°F</td>
+                                    <td>10-15°F</td>
+                                </tr>
+                                <tr>
+                                    <td>R-134a</td>
+                                    <td>15-25 PSIG (Cooling)</td>
+                                    <td>130-150 PSIG</td>
+                                    <td>8-12°F</td>
+                                    <td>5-10°F</td>
+                                </tr>
+                                <tr>
+                                    <td>R-600a (Isobutane)</td>
+                                    <td>5-15 PSIG (Cooling)</td>
+                                    <td>90-110 PSIG</td>
+                                    <td>5-10°F</td>
+                                    <td>5-10°F</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="note">Note: Pressures may vary based on ambient temperature and system design.</p>
+                    </div>
+
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/manifold-gauge.jfif' class="zoomable-image" alt='Pressure Gauges Reading'>
+                            </div>
+                            <p>Pressure Gauges Reading</p>
+                        </div>
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/refrigrant cylinder.jfif' class="zoomable-image" alt='Refrigerant Cylinders'>
+                            </div>
+                            <p>Refrigerant Cylinders</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-tools"></i> Level 2 Tools</h2>
+
+                <div class="tools-content">
+                    <div class="tool-cards">
+                        <div class="tool-card">
+                            <h4><i class="fas fa-vacuum"></i> Vacuum Pump</h4>
+                            <p>
+                                Vacuum pump ka istemal refrigeration system ko evacuate karne ke liye hota hai taake moisture aur air remove ho sake. Proper evacuation is critical for system performance aur preventing contamination. Typical vacuum pumps achieve 500 microns or lower vacuum level.
+                            </p>
+                            <ul>
+                                <li>Capacity: 1-4 CFM for residential systems</li>
+                                <li>Vacuum level: 500 microns or lower</li>
+                                <li>Oil change: Every 50-100 hours</li>
+                                <li>Maintenance: Oil filtration, gaskets</li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-card">
+                            <h4><i class="fas fa-recycle"></i> Recovery Machine</h4>
+                            <p>
+                                Recovery machine ka istemal refrigerant ko system se safely recover karne aur store karne ke liye hota hai. Ye EPA regulations ke anusaar mandatory hai. Machines refrigerant ko filter karke cylinder mein transfer karti hain.
+                            </p>
+                            <ul>
+                                <li>Capacity: 2-8 lbs per minute</li>
+                                <li>Recovery rate: 95%+ efficiency</li>
+                                <li>Filters: Oil and particulate removal</li>
+                                <li>Compatibility: Multiple refrigerant types</li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-card">
+                            <h4><i class="fas fa-bolt"></i> Flaring Tool</h4>
+                            <p>
+                                Flaring tool ka istemal copper tubing ko flare karne ke liye hota hai taake leak-free connections ban sake. Proper flaring ensures secure fitting aur prevents refrigerant leaks. Available in different sizes for various pipe diameters.
+                            </p>
+                            <ul>
+                                <li>Sizes: 1/4", 3/8", 1/2", 5/8", 7/8"</li>
+                                <li>Type: Manual aur ratcheting</li>
+                                <li>Die sets: Matching pipe sizes</li>
+                                <li>Technique: Proper torque application</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flames-section">
+                        <h3>Brazing Flames (Oxy-Acetylene)</h3>
+                        <div class="flame-grid">
+                            <div class="flame-type neutral">
+                                <h4><i class="fas fa-wind"></i> Neutral Flame</h4>
+                                <p>
+                                    Neutral flame oxygen aur acetylene ke equal ratio mein hota hai. Yeh flame welding, brazing aur cutting ke liye sabse suitable hota hai. Flame blue hota hai aur center point pe intense heat hota hai. Yeh metal ko neither oxidize nor carburize karta hai.
+                                </p>
+                                <ul>
+                                    <li>Oxygen:Acetylene ratio: 1:1</li>
+                                    <li>Flame temperature: ~5,600°F</li>
+                                    <li>Best for: Copper, steel, brass</li>
+                                    <li>Sound: Soft, quiet burn</li>
+                                </ul>
+                            </div>
+                            <div class="flame-type oxidizing">
+                                <h4><i class="fas fa-fire"></i> Oxidizing Flame</h4>
+                                <p>
+                                    Oxidizing flame mein oxygen acetylene se zyada hota hai. Yeh flame intense heat provide karta hai lekin metal ko oxidize kar sakta hai. Yeh specific applications mein use hota hai jahan oxidation acceptable hai ya desired hai.
+                                </p>
+                                <ul>
+                                    <li>Oxygen:Acetylene ratio: >1:1</li>
+                                    <li>Flame temperature: ~6,000°F</li>
+                                    <li>Best for: Brass, bronze welding</li>
+                                    <li>Sound: Sharp, noisy whistle</li>
+                                </ul>
+                            </div>
+                            <div class="flame-type carburizing">
+                                <h4><i class="fas fa-smog"></i> Carburizing Flame</h4>
+                                <p>
+                                    Carburizing flame mein acetylene oxygen se zyada hota hai. Yeh flame metal mein carbon add karta hai aur reducing atmosphere provide karta hai. Yeh specific steels aur cast iron ke repair mein use hota hai.
+                                </p>
+                                <ul>
+                                    <li>Oxygen:Acetylene ratio: <1:1</li>
+                                    <li>Flame temperature: ~5,000°F</li>
+                                    <li>Best for: Cast iron, hard surfacing</li>
+                                    <li>Effect: Adds carbon to metal surface</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/tools.jfif' class="zoomable-image" alt='Level 2 Tools'>
+                            </div>
+                            <p>Level 2 Tools</p>
+                        </div>
+                        <div class="image-item">
+                            <div class="image-container">
+                                <img src='pic/Types of Oxy-Acetylene Flames.jfif' class="zoomable-image" alt='Types of Oxy-Acetylene Flames'>
+                            </div>
+                            <p>Types of Oxy-Acetylene Flames</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 HVACR Student Guide. All rights reserved.</p>
+            <p>Developed by <strong>Noor Ahmad</strong>,AI and Robotics Engineer</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
